@@ -1,0 +1,31 @@
+.hero_section {
+    margin: 90px 0;
+    background-color: blueviolet;
+    height: 40rem;
+    width: 100%;
+    background-image: url("/src/images/hero_img.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_content {
+    width: 50%;
+    padding: 10rem;
+}
+
+.hero_title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.hero_paragraph {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.order_button {
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+}

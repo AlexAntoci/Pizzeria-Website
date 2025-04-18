@@ -1,0 +1,18 @@
+footer {
+    height: auto;
+    margin-top: 50rem;
+    background-color: black;
+}
+
+.footer_nav {
+    display: flex;
+}
+
+.footer_links {
+    margin: 2rem;
+}
+
+.footer_link {
+    color: azure;
+    list-style: none;
+}
