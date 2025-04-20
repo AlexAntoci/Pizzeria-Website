@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/images/logos/Pizzeria_mini_logo.png" type="image/x-icon">
 
     <!-- CSS styles -->
 
-    <link rel="stylesheet" href="/src/css/nav_styles.css">
-    <link rel="stylesheet" href="/src/css/container_styles.css">
-    <link rel="stylesheet" href="/src/css/footer_styles.css">
-    <link rel="stylesheet" href="/src/css/hero_styles.css">
+    <link rel="stylesheet" href="/src/css/main_page.css">
 
     <!-- Fonts -->
 
@@ -17,28 +15,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <title>Pizzeria Website</title>
+    <title>Sandus Pizzeria</title>
 </head>
 <body>
 
     <div class="website_container">
+        <header> 
+            <div class="title_container">
+                <img src="/src/images/logos/Pizzeria_full_logo.png" alt="Main Logo">
+            </div>
+        
+        </header>
 
-        <header class="nav_bar">
-            <div class="nav_logo">Logo</div>
+        <nav class="nav_bar">
+            <div class="nav_logo"><img src="/src/images/logos/Pizzeria_mini_logo.png" alt="Pizza Logo"></div>
             <div class="nav_links">
                 <div class="nav_link">Menu</div>
                 <div class="nav_link">Delivery</div>
-                <div class="nav_link">Offers</div>
+                <div class="nav_link">About Us</div>
             </div>
             <div class="nav_icons">
-                <div class="nav_icon">Cart</div>
-                <div class="nav_icon">Contact us</div>
+                <div class="nav_icon cart_icon"> <img src="/src/icons/cart_icon.svg" alt="Cart Icon"> <div class="cart_amount_display hidden">0</div></div>
+                <div class="nav_icon contact_icon"> <img src="/src/icons/contact_icon.svg" alt="Contact Us"> </div>
             </div>
-        </header>
+        </nav>
 
         <section class="hero_section">
             <div class="hero_content">
-                <h1 class="hero_title">Have a look at our delicious Pizza!</h1>
+                <h1 class="hero_title">Have a look at our <span>delicious</span> Pizza!</h1>
                 <p class="hero_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Eum minima enim eligendi magnam at cupiditate maiores minus, 
                     sit temporibus! Porro pariatur facere modi cumque suscipit, doloremque deleniti nostrum eos eveniet! 
@@ -49,7 +53,16 @@
 
         <section class="menu_section">
             <div class="menu_label">
-                <h1>Menu</h1>
+                <h1>MENU</h1>
+            </div>
+            <div class="menu_navigation">
+                <button class="nav_button" id="0">Pizzas</button>
+                <button class="nav_button" id="1">Salads</button>
+                <button class="nav_button" id="2">Drinks</button>
+                <button class="nav_button" id="3">Snacks</button>
+            </div>
+            <div class="menu_item_container" id="M1">
+                
             </div>
         </section>
 
@@ -65,6 +78,6 @@
         </footer>
 
     </div>
-    
+    <script src="/src/js/script.js"></script>
 </body>
 </html>

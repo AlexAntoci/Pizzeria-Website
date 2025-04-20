@@ -1,0 +1,303 @@
+/* //////////////////////////////////////////// Website Container Styles //////////////////////////////////////////// */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.website_container {
+    display: grid;
+    font-family: "Funnel Sans";
+    background-color: burlywood;
+}
+
+
+/* //////////////////////////////////////////// Header Styles //////////////////////////////////////////// */
+
+header {
+ width: 100%;
+
+}
+
+.title_container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 5rem;
+}
+
+.title_container > img {
+    width: 60rem;
+    height: auto;
+}
+
+/* //////////////////////////////////////////// Top Navigation Styles //////////////////////////////////////////// */
+
+.nav_bar {
+    display: flex;
+    background-color: wheat;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 20px 5px;
+    margin-bottom: 80px;
+    position: sticky;
+    top: 0;
+}
+
+
+.nav_links {
+
+display: flex;
+padding: 1rem;
+vertical-align: middle;
+
+}
+
+.nav_link {
+    border-radius: 2rem;
+    color: azure;
+    text-align: center;
+    width: 7rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+.nav_link:hover {
+    cursor: pointer;
+    background-color: azure;
+    color: black;
+}
+
+
+.nav_icons {
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 6rem;
+}
+
+.nav_icon {
+    margin: 1rem;
+    width: 7rem;
+    height: 4rem;
+}
+
+.nav_icon > img {
+    width: 4rem;
+    height: auto;
+    color: orange;
+}
+
+
+.nav_logo {
+    color: azure;
+}
+
+.nav_logo > img {
+    width: 5rem;
+    height: auto;
+}
+
+.cart_icon {
+    position: relative;
+}
+
+.cart_amount_display {
+    font-size: 1.3rem;
+    background-color: black;
+    border-radius: 3rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+    color: white;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    top: 0;
+    right: -10px;
+}
+
+
+/* //////////////////////////////////////////// Hero Section //////////////////////////////////////////// */
+
+.hero_section {
+    margin: 90px 0;
+    background-color: blueviolet;
+    height: auto;
+    width: 100%;
+    background-image: url("/src/images/hero_img.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_content {
+    width: 50%;
+    padding: 10rem;
+    background-color: cadetblue;
+}
+
+.hero_title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.hero_title > span {
+    color: orange;
+}
+
+.hero_paragraph {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.order_button {
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+
+/* //////////////////////////////////////////// Menu Section Styles //////////////////////////////////////////// */
+
+.menu_section {
+    background-color: darkgrey;
+    height: auto;
+    column-gap: 20px;
+}
+
+
+.menu_label {
+    text-align: center;
+}
+
+.menu_navigation {
+
+    display: flex;
+    margin: 4rem auto;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.nav_button {
+    padding: 0.5rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    width: auto;
+    height: auto;
+}
+
+.menu_item_container {
+    padding: 30px;
+    background-color: aquamarine;
+    margin: 2rem auto;
+    width: 90%;
+    height: auto;
+    display: grid;
+    row-gap: 50px;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.item_name {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.menu_item {
+    padding: 5px;
+    width: 200px;
+    height: auto;
+    background-image: linear-gradient(60deg, rgb(255, 127, 67), rgb(248, 193, 92));
+    box-shadow: 0 10px 20px 5px;
+    border-radius: 2rem;
+    transition: 1s;
+}
+
+.item_image {
+    width: 95%;
+    margin: auto;
+}
+.item_image > img {
+    display: block;
+    margin: auto;
+    width: 10rem;
+    border-radius: 5rem;
+}
+
+.item_description {
+ text-align: center;
+ font-style: italic;
+}
+
+.item_details {
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_quantity {
+    background-color: azure;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity_button {
+    background-color: orange;
+    border: 2px rgb(175, 72, 3) solid;
+    border-radius: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.quantity_display {
+    background-color: aliceblue;
+    margin: 0 4px;
+}
+
+.item_price {
+ font-size: 1.5rem;
+}
+
+.add_cart_container {
+    width: 50%;
+    margin: auto;
+}
+
+.add_cart_button {
+    width: auto;
+    padding: 10px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+
+/* //////////////////////////////////////////// Footer Styles //////////////////////////////////////////// */
+
+footer {
+    height: auto;
+    margin-top: 50rem;
+    background-color: black;
+}
+
+.footer_nav {
+    display: flex;
+}
+
+.footer_links {
+    margin: 2rem;
+}
+
+.footer_link {
+    color: azure;
+    list-style: none;
+}
