@@ -4,14 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Funnel Sans";
 }
 
 
 
 .website_container {
     display: grid;
-    font-family: "Funnel Sans";
-    background-color: burlywood;
+    background-color: #deb887;
 }
 
 
@@ -19,6 +19,10 @@
 
 header {
  width: 100%;
+ /* background-image: linear-gradient(60deg, #deb887, #ffb458); */
+ background-image: url("/src/images/logos/page_pattern.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
 
 }
 
@@ -38,7 +42,7 @@ header {
 
 .nav_bar {
     display: flex;
-    background-color: wheat;
+    background-color: rgb(196, 66, 66);
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -61,6 +65,7 @@ vertical-align: middle;
     border-radius: 2rem;
     color: azure;
     text-align: center;
+    font-size: 1.5rem;
     width: 7rem;
     height: 2rem;
     margin: 1rem;
@@ -74,31 +79,43 @@ vertical-align: middle;
 
 
 .nav_icons {
-    width: 6rem;
+    width: 12rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
-    margin: 2rem 6rem;
+    margin: 2rem 3rem;
 }
 
 .nav_icon {
-    margin: 1rem;
-    width: 7rem;
+    width: 4rem;
     height: 4rem;
 }
 
-.nav_icon > img {
+.nav_icon > a > img {
     width: 4rem;
     height: auto;
     color: orange;
+    transition: 1s;
 }
 
+.nav_icon > a > img:hover {
+    width: 5.5rem;
+    height: auto;
+}
 
 .nav_logo {
     color: azure;
 }
 
-.nav_logo > img {
+
+.nav_logo > a > img {
     width: 5rem;
+    height: auto;
+    transition: 1s;
+}
+
+.nav_logo > a> img:hover {
+    width: 5.5rem;
     height: auto;
 }
 
@@ -128,16 +145,20 @@ vertical-align: middle;
     margin: 90px 0;
     background-color: blueviolet;
     height: auto;
-    width: 100%;
+    width: auto;
     background-image: url("/src/images/hero_img.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 0 20px 5px;
 }
 
+
 .hero_content {
+    vertical-align: middle;
     width: 50%;
+    height: auto;
     padding: 10rem;
-    background-color: cadetblue;
+    background-color:  rgba(196, 66, 66, 0.9);
 }
 
 .hero_title {
@@ -159,20 +180,25 @@ vertical-align: middle;
     width: 10rem;
     height: 3rem;
     font-size: 1rem;
+    background-color: orange;
+    border: 0;
+    color: white;
+    box-shadow: 0 0 20px 5px;
 }
 
 
 /* //////////////////////////////////////////// Menu Section Styles //////////////////////////////////////////// */
 
 .menu_section {
-    background-color: darkgrey;
+    margin: 200px 0;
     height: auto;
-    column-gap: 20px;
 }
 
 
 .menu_label {
     text-align: center;
+    font-size: 3rem;
+    font-style: italic;
 }
 
 .menu_navigation {
@@ -189,11 +215,18 @@ vertical-align: middle;
     font-size: 1.5rem;
     width: auto;
     height: auto;
+    border: 0;
+    color: white;
+    background-color:  orange;
+    box-shadow: 0 0 20px 5px;
+
 }
 
 .menu_item_container {
     padding: 30px;
-    background-color: aquamarine;
+    background-color: rgb(196, 66, 66);
+    box-shadow: 0 0 20px 5px;
+    border-radius: 1rem;
     margin: 2rem auto;
     width: 90%;
     height: auto;
@@ -286,7 +319,7 @@ vertical-align: middle;
 footer {
     height: auto;
     margin-top: 50rem;
-    background-color: black;
+    background-color: rgb(196, 66, 66);
 }
 
 .footer_nav {
@@ -301,3 +334,45 @@ footer {
     color: azure;
     list-style: none;
 }
+
+
+
+
+
+
+
+
+/* Media Queries for Smaller Screens */
+
+
+
+
+@media only screen and (max-width: 1135px) {
+
+    .menu_item_container {
+
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+
+    }
+
+    .title_container > img{
+        width: 30rem;
+        height: auto;
+    }
+}
+
+
+
+/* /* 
+@media only screen and (max-width: 1000px) {
+
+    .menu_item_container {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+} */
+
+
