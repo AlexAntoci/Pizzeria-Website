@@ -6,6 +6,8 @@
 let menuContainer = document.getElementById("M1");
 
 
+
+
 /* Storing menu items as objects within an array */
 
 let allMenuItems = [
@@ -13,9 +15,35 @@ let allMenuItems = [
     [],
     [],
     []
-
 ];
 
+
+
+
+
+/* Keep Cart items number */
+
+let nav_cart_display = document.getElementsByClassName("cart_amount_display")[0];
+
+let display_cart_displayer = function(){
+    let localStorageKeys = Object.keys(localStorage);
+    let nr_items = 0;
+
+    for (let key of localStorageKeys){
+        let item = JSON.parse(localStorage.getItem(key));
+        nr_items += item.amount;
+    }
+
+    nav_cart_display.innerHTML = nr_items;
+
+    if(nav_cart_display.innerHTML > 0){
+        nav_cart_display.classList.remove("hidden");
+    } else {
+        nav_cart_display.classList.add("hidden");
+    }
+}
+
+display_cart_displayer();
 
 
 /* Creating menu item class so we can create menu items easier + method calling class and add the objects in arrays based on category */
@@ -140,42 +168,69 @@ let add_remove_itemCounter = function(symbol, counterAmount){
 /* Menu - add/update in cart */
 
 let cartArray = [{
-    iD: 0,
-    amount: 0
+    /* iD: 0,
+    amount: 0,
+    price: 0,
+    total: 0,
+    image: "image" */
 
 }];
 let cartNumber = 0;
 
-let add_update_cart = function(item, price, amount, id){
+let add_update_cart = function(item, price, amount, id, image){
+
+   
+
+    let cart_display_element = document.getElementsByClassName("cart_amount_display")[0];
+    let cart_display_value = parseFloat(cart_display_element.innerHTML);
+
+    let added_total_amount = price * amount;
+
+/* 
+    console.log("item: ", item);
+    console.log("price: ", price);
+    console.log("amount: ", amount);
+    console.log("ID: ", id);
+    console.log("total: ", added_total_amount); */
 
 
-    let prices = 0;
-    let cartAmount = 0;
+    /* let resultOfSearch = cartArray.some((element) => element.iD == id); */
 
-    for (i = 0; i < cartArray.length; i++){
-        if (cartArray[i].iD == id){
-            console.log("bye");
-            cartArray[i].amount = amount;
-            prices += price * amount;
-            cartAmount += amount;
-        } else {
-            console.log('hi');
-            cartArray.push({
+    let localStorageKeys = Object.keys(localStorage);
 
-                iD: id,
-                amount: amount,
-
-            });
-            prices += price * amount;
-            cartAmount += amount;
+    let resultOfSearch = function(){
+        for(let key of localStorageKeys){
+            if(key == id){
+                return true;
+            }
         }
     }
-    console.log(prices, price, amount, cartArray[0].iD);
 
-    document.getElementsByClassName("cart_amount_display").innerHTML = cartAmount;
+    console.log(resultOfSearch())
+
+    if(resultOfSearch()){
+       /*  let cart_item = cartArray.find((element) => element.iD == id); */
+        let cart_item = JSON.parse(localStorage.getItem(id));
+        cart_item.amount += amount;
+        cart_item.total += added_total_amount;
+        localStorage.setItem(id, JSON.stringify(cart_item));
+    } else {
+        let addingElement = {
+
+            iD: id,
+            amount: amount,
+            price: price,
+            total: added_total_amount,
+            image: image
+
+        }
+        cartArray.push(addingElement);
+        localStorage.setItem(id, JSON.stringify(addingElement));
+    }
 
 
-
+    cart_display_element.innerHTML = cart_display_value + amount;
+ 
 }
 
 
@@ -209,12 +264,45 @@ document.addEventListener("click", function(event){
 
         let detailsAmount = getDetails.getElementsByClassName("item_quantity")[0];
         let amountDisplay = parseInt(detailsAmount.getElementsByClassName("quantity_display")[0].innerHTML);
-
-
         
-        add_update_cart(parentElement, price, amountDisplay, grandparentElementID);
+        let elementImage = grandparentElement.getElementsByClassName("item_image")[0];
+        let elementImageIMG = elementImage.childNodes[0].src;
+
+        add_update_cart(parentElement, price, amountDisplay, grandparentElementID, elementImageIMG);
+        display_cart_displayer();
     }
 })
+
+
+/* Carousel Script */
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].classList.remove("hidden");
+  slides[slideIndex-1].style.display = "block";
+}
+
 
 
 

@@ -1,12 +1,15 @@
 
 
+
 /* Cart Section Styles */
 
 .cart_section {
-    background-color: aquamarine;
+    background-image: linear-gradient(60deg, rgb(196, 66, 66), rgb(255, 135, 55));
     width: 80%;
     margin: 5rem auto;
     padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px;
 }
 
 .cart_title {
@@ -31,6 +34,10 @@
     padding: 1rem;
     font-size: 1.5rem;
     border-radius: 3rem;
+    background-color: orangered;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px 5px;
 }
 
 
@@ -40,17 +47,19 @@
     padding: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cart_container {
-    width: 80%;
+    width: 100%;
     background-color: azure;
-    display: grid;
+    border-radius: 20px;
 }
 
 .cart_item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .order_info_container {
@@ -62,17 +71,76 @@
 .item_cart_info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-
-
-.cart_total {
-    
-    width: 20%;
+.item_cart_details {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.cart_total > div {
+
+.amount_button > button {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    padding: 2px;
+    width: 25px;
+    height: auto;
+}
+
+
+.remove_item {
+
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2px;
+    width: 50px;
+    height: auto;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.total_price {
     display: flex;
+}
+
+.item_cart_image > img{
+    width: 50px;
+    height: auto;
+}
+
+
+/* Empty Cart element styles */
+
+.empty_cart {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+/* Order section styles */ 
+
+.order_container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+.totals {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+.totals > p,span {
+    font-size: 2rem;
 }

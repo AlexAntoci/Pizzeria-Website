@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+   
+
     <title>Sandus Pizzeria</title>
 </head>
 <body>
@@ -34,8 +36,8 @@
                 <div class="nav_link">About Us</div>
             </div>
             <div class="nav_icons">
-                <div class="nav_icon cart_icon"><a href="/src/html/cart.html"><img src="/src/icons/cart_icon.svg" alt="Cart Icon"> <div class="cart_amount_display hidden">0</div></a></div>
-                <div class="nav_icon contact_icon"><a href=""><img src="/src/icons/contact_icon.svg" alt="Contact Us"></a> </div>
+                <div class="nav_icon cart_icon"><a href="/src/html/cart.html"><img src="/src/icons/cart_icon.svg" alt="Cart Icon"> <div class="cart_amount_display">0</div></a></div>
+                <div class="nav_icon contact_icon"><a href="/src/html/contact_us.html"><img src="/src/icons/contact_icon.svg" alt="Contact Us"></a> </div>
             </div>
         </nav>
 
@@ -65,21 +67,137 @@
             </div>
         </section>
 
-        <footer>
-            <div class="footer_nav">
-                <div class="footer_links">
+        <section class="delivery_section">
+
+            <div class="delivery_title"><h2>Delivery</h2></div>
+            <div class="delivery_content">
+                <div class="delivery_image">
+                    <img src="/src/images/pizza_deliver_image.png" alt="pizza delivery">
+                </div>
+                <div class="delivery_text">
                     <ul>
-                        <li class="footer_link">Menu</li>
-                        <li class="footer_link">Delivery</li>
-                        <li class="footer_link">About Us</li>
-                        <li class="footer_link">Contact Us</li>
+                        <li>Within Chisinau, we deliver within 1 hour</li>
+                        <li>Outside Chisinau, we deliver in 1-2 hours</li>
+                        <li>Delivery costs <span class="delivery_price">10</span>$ for deliveries within Chisinau</li>
+                        <li>Delivery costs <span class="delivery_price">20</span>$ for deliveries outside Chisinau</li>
+                        <li>Delivery is free for orders worth more than <span class="delivery_price">70</span>$</li>
                     </ul>
                 </div>
             </div>
-        </footer>
 
+        </section>
+
+        <section class="about_us_section">
+            <div class="about_us_content">
+                <h2>About Us</h2>
+                <div class="about_us_carousel_container">
+
+                        <div class="mySlides">
+                          <img src="/src/images/about_us_activity.jpg">
+                          <div class="about_us_description">
+                            <p id="caption">We have over <span>10</span> years of experience.</p>
+                          </div>
+                        </div>
+                    
+                        <div class="mySlides hidden">
+                          <img src="/src/images/about_us_professional.jpg">
+                          <div class="about_us_description">
+                            <p id="caption">Cooking with <span>Professionalism</span></p>
+                          </div>
+                        </div>
+                    
+                        <div class="mySlides hidden">
+                          <img src="/src/images/about_us_love.jpg">
+                          <div class="about_us_description">
+                            <p id="caption">Cooking with <span>Love</span></p>
+                          </div>
+                        </div>
+                    
+                        <div class="mySlides hidden">
+                          <img src="/src/images/about_us_memories.jpg">
+                          <div class="about_us_description">
+                            <p id="caption">Creating <span>Memories</span></p>
+                          </div>
+                        </div>
+
+                </div>
+                <a class="prev_arrow" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next_arrow" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer_main_container">
+
+                <div class="footer_newsletter_container foot_cont">
+                    <div class="footer_newsletter">
+                        <h1>Follow our newsletter!</h1>
+                        <div class="email_insert_container">
+                            <input type="email" name="Your email" id="email">
+                            <button type="submit">></button>
+                        </div>
+                    </div>
+
+                    <div class="online_shop_container">
+                        <div class="online_shop_links">
+                            <div class="apple_store shop_link"><img src="/src/images/apple_store.png" alt="apple_store"></div>
+                            <div class="google_store shop_link"><img src="/src/images/google_play.png" alt="google_store"></div>
+                        </div>
+
+                        <div class="other_links">
+                            <ul>
+                                <li>Privacy</li>
+                                <li>Careers</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer_links foot_cont">
+
+                    <div class="footer_container">
+                
+
+                            <div class="footer_link_list">
+                                <ul>
+                                    <li>Test1</li>
+                                    <li>Test2</li>
+                                    <li>Test3</li>
+                                </ul>
+                            </div>
+        
+                            <div class="footer_link_list">
+                                <ul>
+                                    <li>Test1</li>
+                                    <li>Test2</li>
+                                    <li>Test3</li>
+                                </ul>
+                            </div>
+
+                            <div class="footer_link_list">
+                                <ul>
+                                    <li>Test1</li>
+                                    <li>Test2</li>
+                                    <li>Test3</li>
+                                </ul>
+                            </div>
+
+                        
+                    </div>
+
+                    <div class="footer_credentials">
+                        <div class="footer_logo"><img src="/src/images/logos/Pizzeria_mini_logo.png" alt="logo"></div>
+                        <div class="copyright">@2025 Sandus Pizza</div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="/src/js/script.js"></script>
+    
 </body>
 </html>
 

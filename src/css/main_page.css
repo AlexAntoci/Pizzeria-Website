@@ -12,6 +12,7 @@
 .website_container {
     display: grid;
     background-color: #deb887;
+    background-image: url("/src/images/pizza_background_pattern.png");
 }
 
 
@@ -41,8 +42,8 @@ header {
 /* //////////////////////////////////////////// Top Navigation Styles //////////////////////////////////////////// */
 
 .nav_bar {
+    
     display: flex;
-    background-color: rgb(196, 66, 66);
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -50,6 +51,11 @@ header {
     margin-bottom: 80px;
     position: sticky;
     top: 0;
+    z-index: 5;
+    background-color: rgb(196, 66, 66);
+    /* grid-row: auto;
+    grid-template-columns:  repeat(auto-fit, minmax(100px, 1fr));
+    display: grid; */
 }
 
 
@@ -57,18 +63,19 @@ header {
 
 display: flex;
 padding: 1rem;
-vertical-align: middle;
 
 }
 
 .nav_link {
     border-radius: 2rem;
-    color: azure;
+    color: rgb(252, 182, 52);
     text-align: center;
+    vertical-align: middle;
     font-size: 1.5rem;
     width: 7rem;
     height: 2rem;
     margin: 1rem;
+    font-weight: 300;
 }
 
 .nav_link:hover {
@@ -83,12 +90,14 @@ vertical-align: middle;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    margin: 2rem 3rem;
+    margin: 2rem 0;
+    align-content: center;
 }
 
 .nav_icon {
     width: 4rem;
     height: 4rem;
+    align-content: center;
 }
 
 .nav_icon > a > img {
@@ -109,13 +118,14 @@ vertical-align: middle;
 
 
 .nav_logo > a > img {
-    width: 5rem;
+
+    width: 4rem;
     height: auto;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .nav_logo > a> img:hover {
-    width: 5.5rem;
+    width: 4.5rem;
     height: auto;
 }
 
@@ -190,7 +200,7 @@ vertical-align: middle;
 /* //////////////////////////////////////////// Menu Section Styles //////////////////////////////////////////// */
 
 .menu_section {
-    margin: 200px 0;
+    margin: 300px 0;
     height: auto;
 }
 
@@ -207,9 +217,11 @@ vertical-align: middle;
     margin: 4rem auto;
     justify-content: space-between;
     width: 30%;
+
 }
 
 .nav_button {
+
     padding: 0.5rem;
     border-radius: 3rem;
     font-size: 1.5rem;
@@ -223,6 +235,7 @@ vertical-align: middle;
 }
 
 .menu_item_container {
+
     padding: 30px;
     background-color: rgb(196, 66, 66);
     box-shadow: 0 0 20px 5px;
@@ -235,6 +248,7 @@ vertical-align: middle;
     column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
+
 }
 
 .item_name {
@@ -256,6 +270,7 @@ vertical-align: middle;
     width: 95%;
     margin: auto;
 }
+
 .item_image > img {
     display: block;
     margin: auto;
@@ -314,35 +329,236 @@ vertical-align: middle;
 }
 
 
+/* //////////////////////////////////////////// Delivery Sections Styles //////////////////////////////////////////// */
+
+.delivery_section {
+    background-image: linear-gradient(60deg, rgb(196, 66, 66), rgb(255, 135, 55));
+    box-shadow: 0 0 20px 5px;
+    margin: 300px 0;
+}
+
+.delivery_title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.delivery_content {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delivery_image > img {
+
+    width: 40rem;
+    height: auto;
+
+}
+
+.delivery_text {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.delivery_text > ul {
+    list-style: none;
+    line-height: 3.2rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.delivery_price {
+    color:  white;
+}
+
+
+/* ////////////////////////////////////////////  About Us Styles  ////////////////////////////////////////////  */
+
+.about_us_section {
+    width: 100%;
+    height: 900px;
+    background-image: linear-gradient(60deg, rgb(196, 66, 66), rgb(255, 135, 55));
+    margin: 300px 0;
+}
+
+
+.about_us_content {
+    position: relative;
+    z-index: 0;
+}
+
+.about_us_content > h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.mySlides {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    transition: 1s;
+}
+
+.mySlides > img {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 3rem;
+}
+
+
+
+.about_us_description {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.about_us_description > p > span {
+    color: orangered;
+}
+
+
+.hidden {
+
+    opacity: 0;
+    transition: 1s;
+}
+
+
+.prev_arrow {
+
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 4rem;
+    transition: 1s;
+
+}
+
+.next_arrow {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    font-size: 4rem;
+    transition: 1s;
+}
+
+.next_arrow:hover {
+
+    cursor: pointer;
+    font-size: 5rem;
+
+} 
+
+.prev_arrow:hover {
+    cursor: pointer;
+    font-size: 5rem;
+}
+
 /* //////////////////////////////////////////// Footer Styles //////////////////////////////////////////// */
 
 footer {
     height: auto;
     margin-top: 50rem;
     background-color: rgb(196, 66, 66);
+    box-shadow: 0 0 20px 5px;
 }
 
-.footer_nav {
+.footer_main_container {
+    width: 85%;
+    margin: 80px auto;
     display: flex;
+    justify-content: space-between;
 }
 
-.footer_links {
-    margin: 2rem;
+.foot_cont {
+    width: 50%;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    align-content: space-between;
+    border: orange solid;
+    border-style: hidden hidden solid hidden;
 }
 
-.footer_link {
-    color: azure;
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_newsletter > h1 {
+    margin-bottom: 20px;
+}
+
+.online_shop_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.online_shop_links {
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+}
+
+.shop_link {
+    margin: auto 5px;
+}
+
+.other_links > ul {
+    display: flex;
     list-style: none;
 }
 
+.other_links > ul > li {
+    margin: 10px;
+}
 
 
+.footer_credentials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
+.footer_logo > img{
+    margin: 0 30px;
+    width: 50px;
+    height: auto;
+}
+
+.shop_link > img {
+    width: 100px;
+    height: auto;
+}
+
+.footer_link_list > ul {
+    list-style: none;
+}
+
+.email_insert_container > input {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.email_insert_container > button {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: orange;
+    border: none;
+}
 
 
-
-/* Media Queries for Smaller Screens */
+/* //////////////////////////////////////////// Media Queries for Smaller Screens //////////////////////////////////////////// */
 
 
 
@@ -361,18 +577,159 @@ footer {
         width: 30rem;
         height: auto;
     }
+
+    .hero_content {
+        padding: 4rem;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .menu_navigation {
+        display: block;
+    }
+
+
+    .menu_navigation {
+
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .nav_button {
+
+        margin: 0.5rem;
+        justify-content: center;
+    
+    }
+
+    .delivery_title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .delivery_content {
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .delivery_image > img {
+    
+        width: 20rem;
+        height: auto;
+    
+    }
+    
+    .delivery_text {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .delivery_text > ul {
+        list-style: none;
+        line-height: 3.0rem;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .footer_main_container {
+        flex-direction: column;
+        gap: 50px;
+    }
+ 
+    .foot_cont {
+        width: 100%;
+    }
+
 }
 
 
 
-/* /* 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 660px) {
 
     .menu_item_container {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        width: 70%;
 
     }
-} */
 
+    .hero_content {
+        padding: 2rem;
+    }
+
+    .title_container > img{
+        width: 15rem;
+        height: auto;
+    }
+
+    .hero_content {
+        padding: 1.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .delivery_title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .delivery_content {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .delivery_image > img {
+    
+        width: 20rem;
+        height: auto;
+    
+    }
+    
+    .delivery_text {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .delivery_text > ul {
+        list-style: none;
+        line-height: 2.9rem;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .online_shop_container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .footer_container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer_container > ul > li {
+        text-align: center;
+    }
+
+    .footer_newsletter > h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer_link_list {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+} 
 
